@@ -68,7 +68,7 @@ x|q|x
 -----
 x|q|x
 
-Emerald Crystal Piece (usless as of now):
+Emerald Crystal Piece (useless as of now):
 c = emerald crystal x = nothing
 
 x|x|x
