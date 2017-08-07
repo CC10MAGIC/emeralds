@@ -1,8 +1,8 @@
 Emeralds Mod
 
-This mod adds emerald ore and some decorative blocks to minetest. It has been made by cloning the textures and the code of the quartz mod and modifying them. Credit for the original code and textures goes to the author of the quartz mod. I changed the code and names to emerald and I redesigned the textures to look like emerald. Emeralds are twice as rare as quartz but that's not much. Maybe I will add emerald weapons and emerald tools in the future.
+This mod adds emerald ore and some decorative blocks to minetest. It has been made by cloning the textures and the code of the quartz mod and modifying them. Credit for the original code and textures goes to the author of the quartz mod. I changed the code and names to emerald and I redesigned the textures to look like emerald. Emeralds are twice as rare as quartz but that's not much. 2.0.0 Changes: I have now added an emerald sword and emerald tools. Emerald tools and sword textures are modified from the diamond tools and sword textures. Emerald tools and sword code are the same as bronze tools except their number of uses is twice as much. Since emerald ore is not so rare, I figured it would be good way to make emerald tools valuable, as their durability classifies between mese and diamond.
 
-Version: 1.0.0
+Version: 2.0.0
 License: MIT (see LICENSE.txt)
 
 Dependencies:
@@ -68,7 +68,7 @@ x|q|x
 -----
 x|q|x
 
-Emerald Crystal Piece (useless as of now):
+Emerald Crystal Piece (used to make emerald sword and tools):
 c = emerald crystal x = nothing
 
 x|x|x
@@ -76,3 +76,48 @@ x|x|x
 x|c|x
 -----
 x|x|x
+
+Emerald Pickaxe:
+c = emerald crystal s = stick x = nothing
+
+c|c|c
+-----
+x|s|x
+-----
+x|s|x
+
+Emerald Axe:
+c = emerald crystal s = stick x = nothing
+
+x|c|c
+-----
+x|s|c
+-----
+x|s|x
+
+Emerald Shovel:
+c = emerald crystal s = stick x = nothing
+
+x|c|x
+-----
+x|s|x
+-----
+x|s|x
+
+Emerald Hoe:
+c = emerald crystal s = stick x = nothing
+
+x|c|c
+-----
+x|s|x
+-----
+x|s|x
+
+Emerald Sword:
+c = emerald crystal s = stick x = nothing
+
+x|c|x
+-----
+x|c|x
+-----
+x|s|x
