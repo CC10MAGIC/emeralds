@@ -131,6 +131,55 @@ minetest.register_craft({
 	}
 })
 
+--Emerald Pickaxe
+minetest.register_craft({
+	output = 'emeralds:emerald_pickaxe',
+	recipe = {
+		{'emeralds:emerald_crystal_piece', 'emeralds:emerald_crystal_piece', 'emeralds:emerald_crystal_piece'},
+		{'', 'default:stick', ''},
+		{'', 'default:stick', ''},
+	}
+})
+
+--Emerald Axe
+minetest.register_craft({
+	output = 'emeralds:emerald_axe',
+	recipe = {
+		{'', 'emeralds:emerald_crystal_piece', 'emeralds:emerald_crystal_piece'},
+		{'', 'default:stick', 'emeralds:emerald_crystal_piece'},
+		{'', 'default:stick', ''},
+	}
+})
+
+--Emerald Shovel
+minetest.register_craft({
+	output = 'emeralds:emerald_shovel',
+	recipe = {
+		{'', 'emeralds:emerald_crystal_piece', ''},
+		{'', 'default:stick', ''},
+		{'', 'default:stick', ''},
+	}
+})
+
+--Emerald Hoe
+minetest.register_craft({
+	output = 'emeralds:emerald_hoe',
+	recipe = {
+		{'', 'emeralds:emerald_crystal_piece', 'emeralds:emerald_crystal_piece'},
+		{'', 'default:stick', ''},
+		{'', 'default:stick', ''},
+	}
+})
+
+--Emerald Sword
+minetest.register_craft({
+	output = 'emeralds:emerald_sword',
+	recipe = {
+		{'', 'emeralds:emerald_crystal_piece', ''},
+		{'', 'emeralds:emerald_crystal_piece', ''},
+		{'', 'default:stick', ''},
+	}
+})
 --
 -- ABMS
 --
@@ -199,3 +248,73 @@ if settings:get_bool("ENABLE_HORIZONTAL_PILLAR") then
 			sounds = default.node_sound_glass_defaults(),
 	})
 end
+
+-- Tools Registration
+
+
+-- Emerald Pickaxe
+minetest.register_tool("emeralds:emerald_pickaxe", {
+	description = "Emerald Pickaxe",
+	inventory_image = "emerald_pickaxe.png",
+	tool_capabilities = {
+		full_punch_interval = 1.0,
+		max_drop_level=1,
+		groupcaps={
+			cracky = {times={[1]=4.00, [2]=1.60, [3]=0.80}, uses=60, maxlevel=2},
+		},
+		damage_groups = {fleshy=4},
+	},
+	sound = {breaks = "default_tool_breaks"},
+})
+
+-- Emerald Axe
+minetest.register_tool("emeralds:emerald_axe", {
+	description = "Emerald Axe",
+	inventory_image = "emerald_axe.png",
+	tool_capabilities = {
+		full_punch_interval = 1.0,
+		max_drop_level=1,
+		groupcaps={
+			choppy={times={[1]=2.50, [2]=1.40, [3]=1.00}, uses=60, maxlevel=2},
+		},
+		damage_groups = {fleshy=4},
+	},
+	sound = {breaks = "default_tool_breaks"},
+})
+
+-- Emerald Shovel
+minetest.register_tool("emeralds:emerald_shovel", {
+	description = "Emerald Shovel",
+	inventory_image = "emerald_shovel.png",
+	tool_capabilities = {
+		full_punch_interval = 1.1,
+		max_drop_level=1,
+		groupcaps={
+			crumbly = {times={[1]=1.50, [2]=0.90, [3]=0.40}, uses=80, maxlevel=2},
+		},
+		damage_groups = {fleshy=3},
+	},
+	sound = {breaks = "default_tool_breaks"},
+})
+
+-- Emerald Hoe
+farming.register_hoe("emeralds:emerald_hoe", {
+	description = "Emerald Hoe",
+	inventory_image = "emerald_hoe.png",
+	max_uses = 440,
+	material = "emeralds:emerald_crystal_piece"
+})
+-- Emerald Sword
+minetest.register_tool("emeralds:emerald_sword", {
+	description = "Emerald Sword",
+	inventory_image = "emerald_sword.png",
+	tool_capabilities = {
+		full_punch_interval = 0.8,
+		max_drop_level=1,
+		groupcaps={
+			snappy={times={[1]=2.5, [2]=1.20, [3]=0.35}, uses=80, maxlevel=2},
+		},
+		damage_groups = {fleshy=6},
+	},
+	sound = {breaks = "default_tool_breaks"},
+})
